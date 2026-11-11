@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wayfinder | Smart Campus Navigation</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">W</span><span>WAYFINDER</span></div>
+    <span class="status"><i></i> Campus map prototype</span>
+  </header>
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">SR UNIVERSITY / NAVIGATION DESK</p>
+      <h1>Find your way<br><em>across campus.</em></h1>
+      <p class="intro">Build a journey between any campus locations. Add a middle stop when your day has more than one destination.</p>
+      <div class="route-form">
+        <label>Start point<select id="start"></select></label>
+        <div id="middle-stops"></div>
+        <label>Final destination<select id="destination"></select></label>
+        <div class="form-actions"><button class="add-stop" id="add-stop">+ Add middle stop</button><button class="go" id="find-route">Find route <span>↗</span></button></div>
+        <div class="mode-row"><label class="radio"><input type="radio" name="mode" value="normal" checked> Normal route</label><label class="radio"><input type="radio" name="mode" value="accessible"> Accessibility-friendly</label></div>
+      </div>
+      <p class="note">Distances are prototype estimates. Verify paths on campus before relying on them.</p>
+    </section>
+    <section class="map-panel">
+      <div class="map-head"><div><span class="eyebrow">LIVE JOURNEY</span><h2 id="journey-title">Choose your places</h2></div><div class="metrics" id="metrics"></div></div>
+      <div class="map" id="map"><svg viewBox="0 0 1200 650" aria-label="Schematic campus map"><g id="paths"></g><g id="route-line"></g><g id="markers"></g></svg><div class="map-key"><span><b class="dot route"></b> Your route</span><span><b class="dot place"></b> Campus place</span></div></div>
+      <div class="results" id="results"><div class="empty">Your route and directions will appear here.</div></div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

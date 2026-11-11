@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {"id":"gate","name":"Main Gate","type":"gate","description":"Primary campus entrance.","image":"/static/images/main-gate.svg","x":90,"y":300},
+    {"id":"sg","name":"Second Security","type":"gate","description":"Security checkpoint after the main entrance.","image":"/static/images/security-gate.svg","x":230,"y":300},
+    {"id":"circle","name":"SR University Circle","type":"roundabout","description":"Central campus circle.","image":"/static/images/circle.svg","x":470,"y":300},
+    {"id":"block3","name":"Block 3 (CSE)","type":"academic","description":"Computer Science block.","image":"/static/images/block3.svg","x":470,"y":120,"floors":3},
+    {"id":"ground","name":"Ground","type":"sports","description":"Campus sports ground.","image":"/static/images/ground.svg","x":620,"y":170},
+    {"id":"girls","name":"Girls Hostel","type":"hostel","description":"Girls hostel residence.","image":"/static/images/hostel.svg","x":760,"y":230},
+    {"id":"boys","name":"Boys Hostel","type":"hostel","description":"Boys hostel residence.","image":"/static/images/hostel.svg","x":900,"y":230},
+    {"id":"ece","name":"Block 2 (ECE, EEE, Civil, Mech)","type":"academic","description":"Engineering departments block.","image":"/static/images/block2.svg","x":620,"y":390,"floors":3},
+    {"id":"library","name":"Library","type":"library","description":"Campus library and study space.","image":"/static/images/library.svg","x":780,"y":390},
+    {"id":"b810","name":"Blocks 8, 9 & 10 (CSE)","type":"academic","description":"Computer Science academic blocks.","image":"/static/images/block810.svg","x":1060,"y":300,"floors":3},
+    {"id":"srix","name":"SRiX Innovation Exchange","type":"innovation","description":"Innovation and entrepreneurship centre.","image":"/static/images/srix.svg","x":350,"y":500},
+    {"id":"canteen","name":"Canteen","type":"facility","description":"Campus dining facility.","image":"/static/images/canteen.svg","x":500,"y":540},
+    {"id":"block1","name":"Block 1 (Admin)","type":"academic","description":"Administration block.","image":"/static/images/block1.svg","x":760,"y":540,"floors":3},
+    {"id":"gym","name":"Gym","type":"facility","description":"Campus fitness facility.","image":"/static/images/gym.svg","x":950,"y":540},
+    {"id":"cultural","name":"Cultural Club Rooms","type":"facility","description":"Student cultural activity rooms.","image":"/static/images/cultural.svg","x":1080,"y":540}
+  ],
+  "edges": [
+    {"from":"gate","to":"sg","distance":200,"hint":"Walk toward Second Security."},
+    {"from":"sg","to":"circle","distance":250,"hint":"Continue from Second Security to University Circle."},
+    {"from":"sg","to":"srix","distance":200,"hint":"Take the right after Second Security."},
+    {"from":"srix","to":"canteen","distance":140,"hint":"Continue toward the canteen."},
+    {"from":"circle","to":"block3","distance":150,"hint":"Take the left from the circle."},
+    {"from":"circle","to":"ground","distance":130,"hint":"Walk beside the ground."},
+    {"from":"circle","to":"girls","distance":150,"hint":"Go straight, past the ground."},
+    {"from":"girls","to":"boys","distance":120,"hint":"Keep going straight."},
+    {"from":"circle","to":"ece","distance":140,"hint":"Take the right from the circle."},
+    {"from":"ece","to":"library","distance":130,"hint":"Go straight to the library."},
+    {"from":"library","to":"b810","distance":280,"hint":"Continue toward Blocks 8, 9 and 10."},
+    {"from":"library","to":"block1","distance":290,"hint":"Continue toward Block 1."},
+    {"from":"library","to":"canteen","distance":320,"hint":"Follow the path toward the canteen."},
+    {"from":"canteen","to":"block1","distance":130,"hint":"Turn left to reach Block 1."},
+    {"from":"block1","to":"gym","distance":150,"hint":"Continue toward the gym."},
+    {"from":"block1","to":"cultural","distance":120,"hint":"Continue to the cultural club rooms."}
+  ]
+}
